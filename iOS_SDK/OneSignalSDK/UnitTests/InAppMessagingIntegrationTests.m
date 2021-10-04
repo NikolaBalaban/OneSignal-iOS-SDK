@@ -1437,7 +1437,7 @@
     XCTAssertEqual(1, OSMessagingControllerOverrider.messageDisplayQueue.count);
 
     // Check influence id saved
-    lastReceivedIds = [[[OneSignal trackerFactory] iamChannelTracker] lastReceivedIds];
+    lastReceivedIds = [[[OSTrackerFactory sharedTrackerFactory] iamChannelTracker] lastReceivedIds];
     XCTAssertEqual(lastReceivedIds.count, 1);
 }
 
