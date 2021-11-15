@@ -370,9 +370,10 @@ OneSignalWebView *webVC;
 
 // Prevent the OSNotification blocks from firing if we receive a Non-OneSignal remote push
 + (BOOL)isOneSignalPayload:(NSDictionary *)payload {
-    if (!payload)
-        return NO;
-    return payload[@"custom"][@"i"] || payload[@"os_data"][@"i"];
+    return NO;
+//     if (!payload)
+//         return NO;
+//     return payload[@"custom"][@"i"] || payload[@"os_data"][@"i"];
 }
 
 + (void)handleNotificationAction:(OSNotificationActionType)actionType actionID:(NSString*)actionID {
